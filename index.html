@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+
+<style>
+  * {
+    font-family: system-ui;
+  }
+
+  .navbar-toggler {
+    color: rgb(222 204 204 / 65%) !important;
+    background-color: #f9f7f7 !important;
+  }
+
+  .navbar-nav li a:hover {
+    color: #ffa665 !important;
+
+  }
+
+  .navbar {
+    z-index: 999;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 !important;
+  }
+
+  .navbar-toggler {
+    background-color: transparent !important;
+    border: 0px;
+  }
+
+  .nav-color {
+    background-color: #122b46 !important;
+  }
+
+  .profile_image {
+    background: url('https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=740&t=st=1707325364~exp=1707325964~hmac=bd0beba4ff0f2a31890a4961b0d794e3c7afa1579b690c4f590528a50450c10a') center top;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .line {
+    width: 100px;
+    background-color: #122b46;
+    height: 7px;
+  }
+
+  /* new counter cards */
+  .counter_section {
+    background: linear-gradient(45deg, #e3a735, #3b3b66);
+  }
+
+  /* services */
+  @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+  .snip1566 {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    margin: 20px;
+    max-width: 190px;
+    width: 100%;
+    color: #bbb;
+    font-size: 16px;
+    box-shadow: none !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .snip1566 *,
+  .snip1566:before,
+  .snip1566:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+
+  .snip1566:before,
+  .snip1566:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    border: 2px solid #bbb;
+    border-color: transparent #bbb;
+  }
+
+  .snip1566 img {
+    max-width: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .snip1566 figcaption {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+  }
+
+  .snip1566 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    z-index: 1;
+  }
+
+  .snip1566 a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .snip1566:hover figcaption,
+  .snip1566.hover figcaption {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .snip1566:hover:before,
+  .snip1566.hover:before,
+  .snip1566:hover:after,
+  .snip1566.hover:after {
+    border-width: 10px;
+  }
+
+  .snip1566:hover:before,
+  .snip1566.hover:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .snip1566:hover:after,
+  .snip1566.hover:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* footer */
+
+  .new_footer_area {
+    background: #122b46;
+  }
+
+
+  .new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+  }
+
+  .footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+  }
+
+  .new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+  }
+
+  .new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+  }
+
+  .btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+  }
+
+  .btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  a:hover,
+  a:focus,
+  .btn:hover,
+  .btn:focus,
+  button:hover,
+  button:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+
+
+  .new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #ffffff;
+  }
+
+  .new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+  }
+
+  .f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+  }
+
+  .f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+  }
+
+  .f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+  }
+
+  .new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+  }
+
+  .f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+  .ti-facebook:before {
+    content: "\e741";
+  }
+
+  .ti-twitter-alt:before {
+    content: "\e74b";
+  }
+
+  .ti-vimeo-alt:before {
+    content: "\e74a";
+  }
+
+  .ti-pinterest:before {
+    content: "\e731";
+  }
+
+  .btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+  }
+
+  .btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+  }
+
+  .new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: white;
+  }
+
+  .new_footer_top .f_social_icon a+a {
+    margin-left: 4px;
+  }
+
+  .new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+  }
+
+  .f_600 {
+    font-weight: 600;
+  }
+
+  .f_size_18 {
+    font-size: 18px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #4b505e;
+  }
+
+  .new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+  }
+
+
+  .new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+  }
+
+  .new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+  }
+
+  .new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+  }
+
+
+
+  @-moz-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  @-webkit-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  .services_cards {
+    background: linear-gradient(45deg, #face86, #ffa702);
+  }
+
+  /* Our works */
+  .main_container{
+  width: 100%;
+  height:430px;
+}
+
+  .project_image {
+    background: url('images/image1.png') no-repeat center;
+    background-size: contain;
+    height: 500px;
+    width: 400px;
+  }
+  .project_image2 {
+    background: url('images/image2.png') no-repeat center;
+    background-size: contain;
+    height: 500px;
+    width: 400px;
+  }
+  @media only screen and (max-width: 991px) and (min-width: 260px){
+    .main_container{
+      height: 850px;
+    }
+  }
+  /* Blogs */
+  .blog_img{
+    background: url('https://img.freepik.com/free-photo/medium-shot-man-working-laptop_23-2150323506.jpg?size=626&ext=jpg&uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais') no-repeat center;
+    background-size: cover;
+    height: 430px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+ }
+  .blog_card{
+    transition: 0.5s ease-in-out;
+  }
+  .blog_card:hover{
+    scale: 0.9;
+  }
+  .article{
+    display: none;
+  }
+  .blog_img:hover .article{
+    display: block;
+  }
+  .blog_img_first:hover .article{
+    display: block;
+  }
+  .blog_img_second:hover .article{
+    display: block;
+  }
+  .blog_img_third:hover .article{
+    display: block;
+  }
+  .blog_card:hover .blog_img {
+    transition: .4s ease-in-out;
+    backdrop-filter: blur(5px);
+    
+  }
+  .blog_card:hover .article {
+    background-color: #3d3d3d82;
+  }
+  .blog_card:hover .blog_img_first {
+      transition: .4s ease-in-out;
+      backdrop-filter: blur(5px);
+  }
+  .blog_card:hover .blog_img_second {
+      transition: .4s ease-in-out;
+      backdrop-filter: blur(5px);
+  }
+  .blog_card:hover .blog_img_third {
+      transition: .4s ease-in-out;
+      backdrop-filter: blur(5px);
+  }
+  .blog_card_first:hover .article{
+  background-color: #3d3d3d82;
+  } 
+  .blog_card_second:hover .article {
+  background-color: #3d3d3d82;
+  }
+  .blog_card_third:hover .article {
+    background-color: #3d3d3d82;
+  }
+
+ 
+
+ .blog_tag{
+  border-radius: 50%;
+ }
+ .blog_img_second{
+    background: url('https://img.freepik.com/premium-photo/women-use-magnifying-glasses-computers-analysis-seo-search-engine-optimization-ranking-traffic-websites-internet-business-technology-promoting-traffic-website_29488-9648.jpg?w=1060') no-repeat center;
+    background-size: cover;
+    height: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+ }
+ 
+ .blog_img_third{
+  background: url('https://img.freepik.com/free-photo/business-person-futuristic-business-environment_23-2150970188.jpg?t=st=1707971237~exp=1707974837~hmac=c7d0c9111d8713ab6da81e6a6dd2425b137c5198279eaf55d142fd853031c27b&w=740') no-repeat center;
+  background-size: cover;
+  height: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  }
+ .blog_img_first{
+  background: url('https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?size=626&ext=jpg&uid=P130516280&ga=GA1.2.1719210483.1702021277&semt=ais') no-repeat center;
+  background-size: cover;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  }
+    
+  
+</style>
+
+<body>
+
+  <!-- navbar -->
+  <div class="position-relative">
+    <video autoplay muted loop width="100%">
+      <source src="images/Navy Blue Animated Business Company Presentation Video.mp4" type="video/mp4">
+    </video>
+    <nav class="position-absolute top-0 m-2 mt-5 position-fixed navbar navbar-expand-lg navbar-light rounded-5 shadow"
+      style="width:-webkit-fill-available;  backdrop-filter: blur(10px);   background-color: rgb(15 14 14 / 50%);">
+      <div class="nav-color"></div>
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bolder fw-italic border p-2 rounded-2 fs-6" href="#"
+          style=" color: #ffa309">CapitalTech </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="images/delete.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active   text-white" aria-current="page" href="#" style="color:#ffa309;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link   text-white" href="#" style="color:#ffa309;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link   text-white" href="#" style="color:#ffa309;">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link   text-white" href="#" style="color:#ffa309;">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link   text-white" href="#" style="color:#ffa309;">Blogs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- about us  -->
+  <section class="about_us mt-5">
+    <div class="row  justify-content-center mx-3">
+      <div class="col-lg-4 col-md-8 col-sm-11" data-aos="fade-right">
+        <h6>ABOUT US</h6>
+        <h3 style="color:#ffa309 ">Innovative Solutions <br> <span style="color: #122b46">For Modern Workforce</span>
+        </h3>
+        <div class="line rounded"></div>
+      </div>
+      <div class="col-lg-5 col-md-8 col-sm-11" data-aos="fade-left">
+        <p>Welcome to Capital Technologies, where we blend innovation with a passion for excellence. Since 10+ years, we
+          have embraced a journey marked by resilience, growth, and a commitment to redefining industry. What began as a
+          vision has evolved into a thriving industry leader, with each chapter telling a story of challenges met with
+          unwavering determination and triumphs celebrated with gratitude.</p>
+        <p>Explore our site, discover the magic, and let's paint a future that's as limitless as your imagination. Join
+          us—it's more than business; it's a partnership in possibility.</p>
+
+      </div>
+    </div>
+  </section>
+  <!-- counter section -->
+
+
+  <section class="counter_section mt-5 ">
+    <div class="row align-items-center p-5 m-0">
+      <h2 class="text-white mt-3 fw-bold fs-4">Company Growth</h2>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="d-flex align-items-center">
+          <div class="rounded-circle counter-image bg-light p-4">
+            <img
+              src="https://cdn-icons-png.freepik.com/256/13696/13696875.png?uid=P130516280&ga=GA1.1.1845276776.1704223637&semt=ais"
+              width="50" height="50" alt="">
+          </div>
+          <div class="mx-2 mt-3">
+            <h3 class="text-white" id="count1"></h3>
+            <p class="text-white">Years of experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+        <div class="d-flex align-items-center">
+          <div class="rounded-circle counter-image bg-light p-4">
+            <img
+              src="https://cdn-icons-png.freepik.com/256/9549/9549428.png?uid=P130516280&ga=GA1.1.1845276776.1704223637&semt=ais"
+              width="50" height="50" alt="">
+          </div>
+          <div class="mx-2 mt-3">
+            <h3 class="text-white" id="count2"></h3>
+            <p class="text-white">Clients</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+        <div class="d-flex align-items-center">
+          <div class="rounded-circle counter-image bg-light p-4">
+            <img
+              src="https://cdn-icons-png.freepik.com/256/9549/9549428.png?uid=P130516280&ga=GA1.1.1845276776.1704223637&semt=ais"
+              width="50" height="50" alt="">
+          </div>
+          <div class="mx-2 mt-3">
+            <h3 class="text-white" id="count3"></h3>
+            <p class="text-white">Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+        <div class="d-flex align-items-center">
+          <div class="rounded-circle counter-image bg-light p-4">
+            <img
+              src="https://cdn-icons-png.freepik.com/256/13696/13696875.png?uid=P130516280&ga=GA1.1.1845276776.1704223637&semt=ais"
+              width="50" height="50" alt="">
+          </div>
+          <div class="mx-2 mt-3">
+            <h3 class="text-white" id="count4"></h3>
+            <p class="text-white">Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <!-- <section clas="choose_us mt-5">
+    <div class="row align-items-center mx-5 mt-5">
+      <div class="col-lg-6 col-md-8 col-sm-11"data-aos="fade-left">
+          <h6>WHY US !</h6>
+          <h3 style="color:#122b46">Few Reasons Why <br><span style="color:#ffa309">People Choosing Us!</span></h3>
+          <div class="line rounded"></div>
+          <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+          <ul class="list-unstyled">
+            <li><img src="https://cdn-icons-png.flaticon.com/128/5290/5290058.png" alt="" width="15" height="15"> Lorem ipsum dolor sit amet.</li>
+            <li><img src="https://cdn-icons-png.flaticon.com/128/5290/5290058.png" alt="" width="15" height="15"> Lorem ipsum dolor sit amet.</li>
+            <li><img src="https://cdn-icons-png.flaticon.com/128/5290/5290058.png" alt="" width="15" height="15"> Lorem ipsum dolor sit amet.</li>
+          </ul>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-11" data-aos="fade-right">
+    
+       
+      </div>
+      
+    </div>
+   </section>  -->
+
+
+  <!-- projects-->
+  <!-- <section class="our_work mt-5">
+    <div class="row mx-3 align-items-center justify-content-center">
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <div class="mb-5">
+          <h3 class="fw-semibold" style="color:#ffa309">Work <span style="color:#122b46">Portfolio</span></h3>
+          <div class="border-0 line rounded-5 shadow "></div>
+        </div>
+        <div class="image">
+          <h6>Web Design</h6>
+          <h2 style="color:#ffa309">Tutors11</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+            blind texts.
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle profile_image">
+            </div>
+            <p class="mx-2 m-0">John Smith</p>
+          </div>
+        </div>
+        <div class="image_details">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12 text-center">
+        <img src="images/images.gif" class="img-fluid" height="300" width="500" alt="">
+      </div>
+    </div>
+    <div class="row mx-3 align-items-center justify-content-center">
+      <div class="col-lg-4 col-md-8 col-sm-12 text-center">
+        <img src="images/images.gif" class="img-fluid" height="300" width="500" alt="">
+      </div>
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <div class="image">
+          <h6>Web Design</h6>
+          <h2 style="color:#ffa309">Tutors11</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+            blind texts.
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle profile_image">
+            </div>
+            <p class="mx-2 m-0">John Smith</p>
+          </div>
+        </div>
+        <div class="image_details">
+        </div>
+      </div>
+
+    </div>
+    <div class="row mx-3 align-items-center justify-content-center">
+      <div class="col-lg-5 col-md-8 col-sm-12 ">
+        <div class="image">
+          <h6>Web Design</h6>
+          <h2 style="color:#ffa309">Tutors11</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+            blind texts.
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle profile_image">
+            </div>
+            <p class="mx-2 m-0">John Smith</p>
+          </div>
+        </div>
+        <div class="image_details">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12 text-center">
+        <img src="images/images.gif" class="img-fluid" height="300" width="500" alt="">
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Our Work -->
+  <section class="Our_work mt-5">
+    <div class="mb-5 mx-auto">
+      <h1 class="fw-semibold text-center" style="color:#ffa309">Our <span style="color:#122b46">Portfolio</span></h1>
+      <div class="border-0 line rounded-5 shadow mx-auto"></div>
+    </div>
+    <div class="container">
+      <div class="main_container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 col-sm-12 col-lg-6 my-2">
+            <div class="project_image mx-auto"></div>
+          </div>
+          <div class="col-md-7 col-lg-6 col-sm-12 my-2">
+            <div class="project_details">
+              <p class="my-1 small" style="letter-spacing: 5px;">Web Design</p>
+              <h2 class="fs-semibold h3 text-primary" style="letter-spacing: 2px;">Tutors Eleven Plus</h2>
+              <p class="py-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <div class="d-flex align-items-center">
+                <div class="rounded-circle profile_image">
+                </div>
+                <p class="mx-3 m-0">John Smith <br><span><a href="tutuorselevenplus.com" class="text-decoration-none text-muted">tutuorselevenplus.com</a></span></p>
+              </div>
+              <button class="btn border px-5 mt-4"><a href="/" class="text-decoration-none text-dark small fw-medium fs-6">View Projects</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main_container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 col-lg-6 col-sm-12 my-2 text-lg-end">
+            <div class="project_details">
+              <p class="my-1 small" style="letter-spacing: 5px;">Web Design</p>
+              <h2 class="fs-semibold h3 text-primary text-danger" style="letter-spacing: 2px;">Trolley Mate</h2>
+              <p class="py-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <div class="d-flex align-items-end justify-content-lg-end ">
+                <div class="rounded-circle profile_image">
+                </div>
+                <p class="mx-3 m-0">John Smith <br><span><a href="tutuorselevenplus.com" class="text-decoration-none text-muted">tutuorselevenplus.com</a></span></p>
+              </div>
+              <button class="btn border px-5 mt-4"><a href="/" class="text-decoration-none text-dark small fw-medium fs-6">View Projects</a></button>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-lg-6 my-2">
+            <div class="project_image2 mx-auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- /* Blogs */ -->
+  <section class="blogs mt-5">
+    <div class="container">
+      <div class="row mx-5 pt-5 justify-content-center">
+        <div class="mb-5 mx-auto text-center">
+          <h1 class="fw-semibold text-center" style="color:#ffa309">Our <span style="color:#122b46">Blogs</span></h1>
+          <div class="border-0 line rounded-5 shadow mx-auto"></div>
+          <p class="mx-5 px-5 my-3">Dive into the world of software craftsmanship with us, where innovation meets implementation. Explore insights, tips, and tutorials to elevate your coding skills and stay ahead in the digital frontier.</p>
+        </div>
+      
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img position-relative">
+                    <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                      <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                        <p class="fw-medium m-0">Article</p>
+                      </div> 
+                  </div>
+                </div>
+                
+                <div class="blog_content p-3 ">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">The Developer's Desk and  The Coding Compass</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 my-2">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img_first  position-relative" >
+                  <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                      <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                        <p class="fw-medium m-0">Article</p>
+                      </div> 
+                  </div>
+                </div>
+                <div class="blog_content p-3">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">The Coding Cornerstone and Code Chronicles</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-sm-12">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 my-1">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img_second position-relative">
+                  <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                    <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                      <p class="fw-medium m-0">Article</p>
+                    </div> 
+                  </div> 
+                </div>
+                <div class="blog_content p-3">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">CodeCrafting Corner and TechTonic Tips</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 my-1">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img_third position-relative">
+                  <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                    <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                      <p class="fw-medium m-0">Article</p>
+                    </div> 
+                  </div> 
+                </div>
+                <div class="blog_content p-3">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">The Developer's Desk and  The Coding Compass</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 my-1">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img_third position-relative">
+                  <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                    <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                      <p class="fw-medium m-0">Article</p>
+                    </div> 
+                  </div> 
+                </div>
+                <div class="blog_content p-3">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">CodeCrafting Corner and TechTonic Tips</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+              </div> 
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 my-1">
+              <div class="blog_card  rounded-4 bg-white shadow border">
+                <div class="blog_img_second position-relative">
+                  <div class="h-100 w-100 position-absolute article top-0 end-0 p-3 text-end start-0">
+                    <div class="position-absolute article  end-0 top-0 text-bg-danger blog_tag m-2 px-3 py-1 rounded-5">
+                      <p class="fw-medium m-0">Article</p>
+                    </div> 
+                  </div>
+                </div>
+                <div class="blog_content p-3">
+                  <p class="">April 22,2022</p>
+                  <h5 class="fw-bold">The Coding Cornerstone and Code Chronicles</h5>
+                  <h6 class="text-end" style="color: orange;">Read More <img src="images/arrow.png" width="20" height="20" alt=""></h6>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Features Section -->
+  <section class="features mt-5">
+    <div class="container">
+      <div class="row m-0">
+        <h4>Features</h4>
+        <div class="col-lg-5 col-md-8 com-sm-11">
+          <h1 class="text-dark fw-bold">Business Start With The <br>
+            <span class="fw-light h2 text-dark">Best Features</span></h1>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+           <p>Energistically conceptualize clients-focused data and user-centric process
+            Energistically communicate installed base web.</p>
+        </div>
+       <div class="container">
+        <div class="row my-5 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Continuous Innovation Showcase</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Software Development</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Software Development</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-3">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Software Development</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-3">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Software Development</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <div class="fetaures_cards bg-white shadow p-3">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11827/11827327.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="40" height="40" alt="">
+                <h4 class="mx-4">Software Development</h4>
+              </div>
+              <p class="m-2">Dramatically orchestrate global expe via professional tailers ollaborative initiate networks</p>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Services -->
+  <!-- <section class="services mt-5">
+    <div class="mb-5 text-center">
+      <h2 class="fw-semibold" style="color:#ffa309">Our <span style="color:#122b46"> Services</span></h2>
+      <div class="border-0 line rounded-5 shadow mx-auto "></div>
+    </div>
+     <div class="row align-items-center justify-content-center mx-auto">
+      <div class="col-lg-3 col-md-9 col-sm-9">
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/js.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Custom Software Development</h3>
+        </div>
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/php.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Web Development</h3>
+        </div>
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/js.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Web Development</h3>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-9  col-sm-9">
+        <img src="images/services.png" class="img-fluid" width="600" height="400" alt="">
+      </div>
+      <div class="col-lg-3 col-md-9  col-sm-9">
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/js.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Custom Software Development</h3>
+        </div>
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/computer-settings.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Web Development</h3>
+        </div>
+        <div class="services_cards p-3 bg-white rounded-4 shadow my-2">
+          <img src="images/sql-server.png" width="30" height="30" alt="">
+          <h3 class="fs-5 fw-normal">Web Development</h3>
+        </div>
+      </div>
+     </div>
+  </section> -->
+
+  <!-- OUR PROJECTS -->
+  <!-- <section class="our_projects">
+     <div class="row m-0">
+       <div class="main_div">
+          <div class="col-lg-4 col-md-6 col-sm-11">
+            <div class="projects">
+               <img src="images/3.png" width="400" height="400">
+            </div>
+            <div class="projects">
+              <img src="images/4.png" alt="" width="400" height="400">
+           </div>
+           <div class="projects">
+            <img src="images/5.png" alt="" width="400" height="400">
+         </div>
+          </div>
+       </div>
+     </div>
+
+   </section> -->
+  <!-- team -->
+ <section class="mt-5">
+  <div class="mx-2 pt-5">
+    <div class="mb-5 text-center">
+      <h2 class="fw-semibold" style="color:#ffa309">Our <span style="color:#122b46"> Team</span></h2>
+      <div class="border-0 line rounded-5 shadow mx-auto "></div>
+    </div>
+    <div class="d-flex align-items-center flex-wrap justify-content-center">
+      <figure class="snip1566">
+        <img src="images/khuram.webp" alt="sq-sample14" />
+        <figcaption class="text-center">
+          <div class="my-5">
+            <h3 class="text-white">Khurram</h3>
+            <p>Cheif Executive Officer</p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="snip1566 hover"><img src="images/faiq.webp" alt="sq-sample17" />
+        <figcaption class="text-center">
+          <div class="my-5">
+            <h3 class="text-white">Faiq</h3>
+            <p>Cheif Executive Officer</p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="snip1566"><img src="images/jasmin.webp" alt="sq-sample19" />
+        <figcaption class="text-center">
+          <div class="my-5">
+            <h3 class="text-white">Jasmin</h3>
+            <p>Cheif Executive Officer</p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="snip1566"><img src="images/julian.webp" alt="sq-sample20" />
+        <figcaption class="text-center">
+          <div class="my-5">
+            <h3 class="text-white">Julian</h3>
+            <p>Cheif Executive Officer</p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="snip1566"><img src="images/shahina.webp" alt="sq-sample20" />
+        <figcaption class="text-center">
+          <div class="my-5">
+            <h3 class="text-white">Shahina</h3>
+            <p>Cheif Executive Officer</p>
+          </div>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+    </div>
+  </div>
+ </section>
+  <!-- footer -->
+
+
+  <footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+              style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18 text-white">Get in Touch</h3>
+              <p class="text-white">Don’t miss any updates about Capital Technologies!</p>
+              <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                <button class="btn btn_get btn_get_two" type="submit">Send</button>
+                <p class="mchimp-errmessage" style="display: none;"></p>
+                <p class="mchimp-sucmessage" style="display: none;"></p>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18 text-white">Services</h3>
+              <ul class="list-unstyled f_list">
+                <li class="text-white"><a href="#" class="text-decoration-none">Company</a></li>
+                <li class="text-white"><a href="#" class="text-decoration-none">Android App</a></li>
+                <li class="text-white"><a href="#" class="text-decoration-none">ios App</a></li>
+                <li class="text-white"><a href="#" class="text-decoration-none">Desktop</a></li>
+                <li class="text-white"><a href="#" class="text-decoration-none">Projects</a></li>
+                <li class="text-white"><a href="#" class="text-decoration-none">My tasks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18 text-white">Help</h3>
+              <ul class="list-unstyled f_list">
+                <li class="text-white"><a href="#">FAQ</a></li>
+                <li class="text-white"><a href="#">Term &amp; conditions</a></li>
+                <li class="text-white"><a href="#">Reporting</a></li>
+                <li class="text-white"><a href="#">Documentation</a></li>
+                <li class="text-white"><a href="#">Support Policy</a></li>
+                <li class="text-white"><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+              style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18 text-white">Team Solutions</h3>
+              <div class="f_social_icon">
+                <a href="#" class="fab fa-facebook text-decoration-none"></a>
+                <a href="#" class="fab fa-twitter text-decoration-none"></a>
+                <a href="#" class="fab fa-linkedin text-decoration-none"></a>
+                <a href="#" class="fab fa-pinterest text-decoration-none"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bg">
+        <div class="footer_bg_one"></div>
+        <div class="footer_bg_two"></div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- counter code -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+          current = start,
+          range = end - start,
+          increment = end > start ? 1 : -1,
+          step = Math.abs(Math.floor(duration / range)),
+          timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+              clearInterval(timer);
+            }
+          }, step);
+      }
+      counter("count1", 1000, 100, 3000);
+      counter("count2", 1000, 50, 100);
+      counter("count3", 1000, 40, 3000);
+      counter("count4", 1000, 400, 3000);
+    });
+
+  </script>
+  <script>
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        // Specify the scroll position where you want to check the window size
+        var specificScrollPosition = 300; // Change this value to your desired scroll position
+
+        if ($(this).scrollTop() > specificScrollPosition) {
+          // Check the window size when the scroll position matches the specified point
+          var windowWidth = $(window).width();
+          var windowHeight = $(window).height();
+
+          console.log("Window Size at Scroll Position " + specificScrollPosition + ": Width - " + windowWidth + ", Height - " + windowHeight);
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        // Check if user has scrolled down a certain amount (e.g., 100 pixels)
+        if ($(this).scrollTop() > 100) {
+          // Add or remove classes based on the scroll position
+          $(".navbar").removeClass("rounded-5 mt-5 m-2 ");
+          $(".navbar").addClass("nav-color");
+
+        } else {
+
+          // Add the original classes
+          $(".navbar").addClass("rounded-5 mt-5 m-2");
+          $(".navbar").removeClass("nav-color");
+
+        }
+      });
+    });
+  </script>
+  <script>
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+
+  </script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
